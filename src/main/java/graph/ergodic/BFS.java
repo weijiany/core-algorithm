@@ -81,7 +81,7 @@ public class BFS {
     }
 
     /**
-     * 广度优先，玲姐矩阵表示法
+     * 广度优先，邻接矩阵表示法
      * @param graph 图
      * @param start 起始点
      * @return 遍历结果
