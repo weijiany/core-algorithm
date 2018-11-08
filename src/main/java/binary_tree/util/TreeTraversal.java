@@ -22,14 +22,17 @@ public class TreeTraversal {
     public static List<Integer> preOrderTraversal(Node root) {
         List<Integer> result = new ArrayList<>();
         LinkedList<Node> stack = new LinkedList<>();
-        do {
-            while (root != null) {
+
+        while (!stack.isEmpty() || root != null) {
+            if (root != null) {
                 result.add(root.data);
                 stack.push(root);
                 root = root.left;
+            } else {
+                root = stack.pop().right;
             }
-            root = stack.pop().right;
-        } while (!stack.isEmpty() || root != null);
+        }
+
         return result;
     }
 
@@ -41,15 +44,18 @@ public class TreeTraversal {
     public static List<Integer> inOrderTraversal(Node root) {
         List<Integer> result = new ArrayList<>();
         LinkedList<Node> stack = new LinkedList<>();
-        do {
-            while (root != null) {
+
+        while (!stack.isEmpty() || root != null) {
+            if (root != null) {
                 stack.push(root);
                 root = root.left;
+            } else {
+                Node pop = stack.pop();
+                result.add(pop.data);
+                root = pop.right;
             }
-            root = stack.pop();
-            result.add(root.data);
-            root = root.right;
-        } while (!stack.isEmpty() || root != null);
+        }
+
         return result;
     }
 
