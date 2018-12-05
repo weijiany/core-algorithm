@@ -1,4 +1,4 @@
-package string_matching;
+package string_algorithm;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package string_matching;
+package string_algorithm;
 
 /**
  * 朴素字符串匹配算法

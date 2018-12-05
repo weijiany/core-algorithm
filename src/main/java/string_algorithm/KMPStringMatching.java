@@ -1,4 +1,4 @@
-package string_matching;
+package string_algorithm;
 
 /**
  * KMP 匹配算法
