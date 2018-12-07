@@ -3,6 +3,8 @@ package sort;
 /**
  * 插入排序
  *
+ * 在当前数组大部分都是有序的情况下，选择此排序算法
+ *
  * @author YangWeijian
  * Create on 2018/09/09 16:54
  **/
